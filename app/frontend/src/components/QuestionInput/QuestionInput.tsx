@@ -54,7 +54,7 @@ export const QuestionInput = ({ onSend, disabled, placeholder, clearOnSend, init
     const sendQuestionDisabled = disabled || !question.trim() || disableRequiredAccessControl;
 
     if (disableRequiredAccessControl) {
-        placeholder = "Please login to continue...";
+        placeholder = "Vennligst logg inn for å fortsette...";
     }
 
     return (

@@ -15,10 +15,10 @@ const Layout = () => {
         <div className={styles.layout}>
             <header className={styles.header} role={"banner"}>
                 <div className={styles.headerContainer}>
+                    <img src={ttlogonegativ} className={styles.headerIcon} aria-hidden="true" />
                     <Link to="/" className={styles.headerTitleContainer}>
                         <h3 className={styles.headerTitle}>Chat-Bård</h3>
                     </Link>
-                    <img src={ttlogonegativ} className={styles.headerIcon} aria-hidden="true" />
                     <nav>
                         <ul className={styles.headerNavList}>
                             <li>
