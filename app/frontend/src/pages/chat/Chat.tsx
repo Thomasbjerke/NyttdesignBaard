@@ -28,6 +28,7 @@ import { VectorSettings } from "../../components/VectorSettings";
 import { useMsal } from "@azure/msal-react";
 import { TokenClaimsDisplay } from "../../components/TokenClaimsDisplay";
 import { GPT4VSettings } from "../../components/GPT4VSettings";
+import ttlogotekst from "../../assets/ttlogotekst.png";
 
 const Chat = () => {
     const [isConfigPanelOpen, setIsConfigPanelOpen] = useState(false);
@@ -269,9 +270,8 @@ const Chat = () => {
                 <div className={styles.chatContainer}>
                     {!lastQuestionRef.current ? (
                         <div className={styles.chatEmptyState}>
-                            <SparkleFilled fontSize={"120px"} primaryFill={"rgba(115, 118, 225, 1)"} aria-hidden="true" aria-label="Chat logo" />
-                            <h1 className={styles.chatEmptyStateTitle}>Denne chatbotten svarer på spørsmål om trafikksikkerhet</h1>
-                            <h2 className={styles.chatEmptyStateSubtitle}>Spør om hva som helst eller prøv et eksempel</h2>
+                            <img src={ttlogotekst} className={styles.chatIcon} aria-hidden="true" />
+                            <h2 className={styles.chatEmptyStateSubtitle}>Denne chatbotten svarer på spørsmål om trafikksikkerhet</h2>
                             <ExampleList onExampleClicked={onExampleClicked} useGPT4V={useGPT4V} />
                         </div>
                     ) : (
@@ -335,12 +335,7 @@ const Chat = () => {
                     )}
 
                     <div className={styles.chatInput}>
-                        <QuestionInput
-                            clearOnSend
-                            placeholder="Skriv inn et spørsmål..."
-                            disabled={isLoading}
-                            onSend={question => makeApiRequest(question)}
-                        />
+                        <QuestionInput clearOnSend placeholder="Skriv inn et spørsmål..." disabled={isLoading} onSend={question => makeApiRequest(question)} />
                     </div>
                 </div>
 

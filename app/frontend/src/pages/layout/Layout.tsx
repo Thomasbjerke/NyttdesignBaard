@@ -8,6 +8,8 @@ import { useLogin } from "../../authConfig";
 
 import { LoginButton } from "../../components/LoginButton";
 
+import ttlogonegativ from "../../assets/ttlogonegativ.png";
+
 const Layout = () => {
     return (
         <div className={styles.layout}>
@@ -16,6 +18,7 @@ const Layout = () => {
                     <Link to="/" className={styles.headerTitleContainer}>
                         <h3 className={styles.headerTitle}>Chat-Bård</h3>
                     </Link>
+                    <img src={ttlogonegativ} className={styles.headerIcon} aria-hidden="true" />
                     <nav>
                         <ul className={styles.headerNavList}>
                             <li>
@@ -42,7 +45,6 @@ const Layout = () => {
                             </li>
                         </ul>
                     </nav>
-                    <h4 className={styles.headerRightText}>Azure OpenAI + AI Search</h4>
                     {useLogin && <LoginButton />}
                 </div>
             </header>

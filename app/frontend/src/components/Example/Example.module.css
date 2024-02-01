@@ -10,7 +10,7 @@
 
 .example {
     word-break: break-word;
-    background: #dbdbdb;
+    background: #3C3D43;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
@@ -31,11 +31,13 @@
     font-size: 22px;
     width: 280px;
     min-height: 100px;
+    color: white;
 }
 
 @media only screen and (max-height: 780px) {
     .exampleText {
         font-size: 20px;
         height: 80px;
+        color: white;
     }
 }

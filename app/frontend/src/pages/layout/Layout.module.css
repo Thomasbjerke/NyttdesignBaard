@@ -29,6 +29,12 @@
     height: 40px;
 }
 
+.headerIcon {
+    height: 64px;
+    width: 64px;
+    margin-left: 36px;
+}
+
 .headerTitle {
     margin-left: 12px;
     font-weight: 600;

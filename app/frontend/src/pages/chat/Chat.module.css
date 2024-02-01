@@ -85,7 +85,7 @@
     padding-right: 24px;
     width: 100%;
     max-width: 1028px;
-    background: #A4CDF1;
+    background: #a4cdf1;
 }
 
 .chatAnalysisPanel {
@@ -112,4 +112,9 @@
 .commandButton {
     margin-right: 20px;
     margin-bottom: 20px;
+}
+
+.chatIcon {
+    height: 124px;
+    width: 124px;
 }
