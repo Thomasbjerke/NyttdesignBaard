@@ -13,6 +13,8 @@ html {
     background: #a4cdf1;
 
     font-family:
+        "Calibri",
+        sans-serif,
         "Segoe UI",
         -apple-system,
         BlinkMacSystemFont,
@@ -22,8 +24,7 @@ html {
         "Cantarell",
         "Fira Sans",
         "Droid Sans",
-        "Helvetica Neue",
-        sans-serif;
+        "Helvetica Neue";
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
