@@ -17,9 +17,7 @@ const Layout = () => {
                 <div className={styles.headerContainer}>
                     <div className={styles.headerTitleContainer}>
                         <img src={ttlogonegativ} className={styles.headerIcon} aria-hidden="true" />
-                        <Link to="/" className={styles.headerTitleContainer}>
-                            <h3 className={styles.headerTitle}>Chat-Bård</h3>
-                        </Link>
+                        <h3 className={styles.headerTitle}>Chat-Bård</h3>
                     </div>
                     <nav>
                         <ul className={styles.headerNavList}>
