@@ -9,7 +9,7 @@ param environmentName string
 @description('Primary location for all resources')
 param location string
 
-param appServicePlanName string = ''
+param appServicePlanName string = 'chatbaard'
 param backendServiceName string = ''
 param resourceGroupName string = ''
 
