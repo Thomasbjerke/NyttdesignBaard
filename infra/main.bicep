@@ -9,7 +9,7 @@ param environmentName string
 @description('Primary location for all resources')
 param location string
 
-param appServicePlanName string = 'chatbaard'
+param appServicePlanName string = ''
 param backendServiceName string = ''
 param resourceGroupName string = ''
 
@@ -196,7 +196,7 @@ module backend 'core/host/appservice.bicep' = {
   name: 'web'
   scope: resourceGroup
   params: {
-    name: !empty(backendServiceName) ? backendServiceName : '${abbrs.webSitesAppService}backend-${resourceToken}'
+    name: 'chatbaard'
     location: location
     tags: union(tags, { 'azd-service-name': 'backend' })
     appServicePlanId: appServicePlan.outputs.id

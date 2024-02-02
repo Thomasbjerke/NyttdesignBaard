@@ -58,7 +58,6 @@ class ChatReadRetrieveReadApproach(ChatApproach):
         For example, if asked whether a vulnerable road user can be used to make food, and the sources mention vulnerable road users, but do not clarify their ability to make food, the assistant will inform that, based on the provided sources, it cannot confirm if a vulnerable road user can be used to make food. 
         The assistant will advise referring to material specifications and guidelines that explicitly address the intended use. Always identify the language of the question, and answer in the same language. If the question is in Norwegian, the answer should always be in Norwegian. When the language of the question
         can not be distinctly identified, reply in Norwegian.
-        {sources}
         """
 
     @overload
