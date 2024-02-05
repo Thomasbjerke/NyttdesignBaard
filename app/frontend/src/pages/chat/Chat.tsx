@@ -32,7 +32,7 @@ import ttlogotekst from "../../assets/ttlogotekst.png";
 
 const Chat = () => {
     const [isConfigPanelOpen, setIsConfigPanelOpen] = useState(false);
-    const [promptTemplate, setPromptTemplate] = useState<string>("");
+    const [promptTemplate, setPromptTemplate] = useState<string>(">>> Answer in Norwegian");
     const [retrieveCount, setRetrieveCount] = useState<number>(3);
     const [retrievalMode, setRetrievalMode] = useState<RetrievalMode>(RetrievalMode.Hybrid);
     const [useSemanticRanker, setUseSemanticRanker] = useState<boolean>(true);
