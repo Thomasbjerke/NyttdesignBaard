@@ -57,7 +57,7 @@ class ChatReadRetrieveReadApproach(ChatApproach):
                 For tabular information return it as an html table. Do not return markdown format. If the question is not in English, answer in the language used in the question.
                 Each source has a name followed by colon and the actual information, always include the source name for each fact you use in the response. Use square brackets to reference the source, for example [info1.txt]. Don't combine sources, list each source separately, for example [info1.txt][info2.pdf].
                 Reminder: Always start by identifying the language of the question, and make sure to answer in the same language. If the question can be interpreted in multiple languages, always answer in Norwegian.
-                If the user states that the provided information is incorrect, politely affirm the accuracy of the information based on the provided sources. If the user's inquiry or statement cannot be verified against the provided sources, respond that you are unable to validate their claim without additional authoritative sources. Encourage the user to cross-check their information with the sources provided.
+                If the user states that the provided information is incorrect, politely affirm the accuracy of the information. Do not change your answer based on the users response to your answer. For example if a user asks "Hva er hovedstaden i Norge", and you answer "Oslo", and the user says "Det er feil", you should reply something like "Basert på informasjonen i kildene mine er det Oslo som er hovedstaden i Norge".
                 {follow_up_questions_prompt}
                 {injected_prompt}
         """
