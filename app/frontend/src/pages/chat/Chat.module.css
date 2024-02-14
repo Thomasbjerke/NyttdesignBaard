@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; /* Ensures that the container takes the full width */
+    width: 100%;
 }
 
 .chatEmptyState {
@@ -38,59 +38,45 @@
 .chatEmptyStateSubtitle {
     font-weight: 600;
     margin-bottom: 10px;
-}
-
-@media only screen and (max-height: 780px) {
-    .chatEmptyState {
-        padding-top: 0;
-    }
-
-    .chatEmptyStateTitle {
-        font-size: 3rem;
-        margin-bottom: 0px;
-    }
+    text-align: center; /* Center align the text for all views */
 }
 
 .chatMessageStream {
     flex-grow: 1;
+    width: calc(100vw - 48px); /* Subtracting the total left and right padding */
     max-height: 1024px;
-    max-width: 1028px;
-    width: 100%; /* Full width to contain child elements */
     overflow-y: auto;
-    padding: 0 24px; /* Horizontal padding for inner spacing */
+    padding: 0 24px;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
-.chatMessageGpt {
+.chatMessageGpt,
+.chatMessageGptMinWidth {
     margin-bottom: 20px;
     display: flex;
-    width: 100%; /* Full width, the max-width is removed */
-    box-sizing: border-box; /* Includes padding in the width calculation */
-}
-
-.chatMessageGptMinWidth {
-    width: 100%; /* Full width, the max-width is removed */
-    margin-bottom: 20px;
-    box-sizing: border-box; /* Includes padding in the width calculation */
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word; /* This ensures text wraps within the container */
 }
 
 .chatInput {
     position: sticky;
     bottom: 0;
     flex: 0 0 100px;
-    padding: 12px 24px; /* Consistent padding */
-    width: 100%; /* Full width */
+    padding: 12px 24px;
+    width: 100%;
     background: #a4cdf1;
-    box-sizing: border-box; /* Includes padding in the width calculation */
+    box-sizing: border-box;
 }
 
 .chatAnalysisPanel {
     flex: 1;
     overflow-y: auto;
     max-height: 89vh;
-    margin: 0 20px; /* Consistent margin */
-    box-sizing: border-box; /* Includes padding in the width calculation */
+    margin: 0 20px;
+    box-sizing: border-box;
 }
 
 .chatSettingsSeparator {
@@ -114,4 +100,73 @@
 .chatIcon {
     height: 256px;
     width: 256px;
+}
+
+/* Media queries for mobile devices */
+@media (max-width: 600px) {
+    .chatEmptyState {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .chatEmptyStateTitle {
+        font-size: 2rem;
+    }
+
+    .chatEmptyStateSubtitle {
+        font-size: 1rem;
+        /* Make sure the text is centered by adjusting the container alignment */
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .chatMessageStream {
+        width: calc(100vw - 24px); /* Less padding for smaller screens */
+        padding: 0 12px;
+    }
+
+    .chatInput {
+        padding: 12px;
+    }
+
+    .chatAnalysisPanel {
+        margin: 0 10px;
+    }
+
+    .chatIcon {
+        height: 128px;
+        width: 128px;
+    }
+
+    .commandsContainer {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .commandButton {
+        margin-right: 10px;
+    }
+}
+
+/* Additional styling for even smaller devices like iPhone 5/SE */
+@media (max-width: 320px) {
+    .chatEmptyState {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .chatEmptyStateTitle {
+        font-size: 1.5rem;
+    }
+
+    .chatEmptyStateSubtitle {
+        font-size: 0.8rem;
+    }
+
+    .chatIcon {
+        height: 96px;
+        width: 96px;
+    }
 }

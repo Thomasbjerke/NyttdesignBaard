@@ -50,7 +50,6 @@
     color: #a4cdf1;
     text-decoration: none;
     opacity: 0.75;
-
     transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
     transition-duration: 500ms;
     transition-property: opacity;
@@ -81,4 +80,36 @@
 
 .githubLogo {
     height: 20px;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .headerContainer {
+        justify-content: space-between;
+        margin-right: 6px;
+        margin-left: 6px;
+    }
+
+    .headerTitleContainer {
+        margin-right: auto; /* Resets margin to distribute space */
+    }
+
+    .headerIcon {
+        height: 48px; /* Smaller icon on mobile */
+        width: 48px;
+        margin-left: 12px; /* Less margin on mobile */
+    }
+
+    .headerTitle {
+        margin-left: 8px; /* Less margin on mobile */
+        font-size: 1.2rem; /* Smaller font size on mobile */
+    }
+
+    .headerNavList {
+        display: none; /* Hide navigation links on mobile */
+    }
+
+    .headerRightText {
+        display: none; /* Hide right text on mobile */
+    }
 }
