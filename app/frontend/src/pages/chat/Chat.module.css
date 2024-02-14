@@ -43,22 +43,26 @@
 
 .chatMessageStream {
     flex-grow: 1;
-    width: calc(100vw - 48px); /* Subtracting the total left and right padding */
     max-height: 1024px;
+    max-width: 1028px;
+    width: 100%;
     overflow-y: auto;
     padding: 0 24px;
     display: flex;
     flex-direction: column;
-    box-sizing: border-box;
 }
 
-.chatMessageGpt,
-.chatMessageGptMinWidth {
+.chatMessageGpt {
     margin-bottom: 20px;
     display: flex;
     width: 100%;
     box-sizing: border-box;
-    overflow-wrap: break-word; /* This ensures text wraps within the container */
+}
+
+.chatMessageGptMinWidth {
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
 .chatInput {
@@ -123,7 +127,6 @@
     }
 
     .chatMessageStream {
-        width: calc(100vw - 24px); /* Less padding for smaller screens */
         padding: 0 12px;
     }
 
